@@ -1,6 +1,13 @@
 // Najpierw nadajemy nasz access token, czyli mapboxowe uwierzytelnienie konta
 // Więc o access tokenie tu: https://docs.mapbox.com/help/how-mapbox-works/access-tokens
-mapboxgl.accessToken = 'pk.eyJ1Ijoia2Fyb2xib2IiLCJhIjoiY2p2eGdjNHc1MDNrbTQ4bndreHZheWhrZyJ9.EqSz6y7M7GsG53TRswocTg';
+mapboxgl.accessToken = 'pk.eyJ1IjoibmF0YWxpYWNob2puYWNrYSIsImEiOiJjanZ4Z202dDAwNGlrNGJtcXF1a3lhbXh1In0.djjjVEHUcv59eZ5zS8Jucg';
+
+function flyToStore(currentFeature) {
+  map.flyTo({
+    center: currentFeature.geometry.coordinates,
+    zoom: 17
+  });
+}
 
 //Tworzymy nowy obiekt o nazwie map, za pomocą funkcji pobranej z mapboxa
 const map = new mapboxgl.Map({
@@ -9,7 +16,7 @@ const map = new mapboxgl.Map({
   container: 'map',
     // Style odpowiada za połączenie się do "dobrej" mapy z mapbox studio
     // W naszym przypadku - tej stworzonej przez Karola z zamieszczonymi punktami pubów
-  style: 'mapbox://styles/karolbob/cjvzea29017gx1cmv4qy7plef',
+  style: 'mapbox://styles/nataliachojnacka/cjwkh0q0368mg1cmdjbou5m1j',
     // Centrowanie i zoom odpowiada za ustawienie perseptywy w której wczytuje się mapa
   center: [16.939,52.408],
   zoom: 15.50
@@ -22,7 +29,8 @@ map.on('click', 'projekt-piwny-1ixmu5', function (e) {
 var coordinates = e.features[0].geometry.coordinates.slice();
 var description = 'Piwo od: ' +  e.features[0].properties.Cena + "<br> Nazwa:" + e.features[0].properties.Nazwa +
   "<br> Adres:" + e.features[0].properties.Adres
-  
+flyToStore(e.features[0])
+
 // Ensure that if the map is zoomed out such that multiple
 // copies of the feature are visible, the popup appears
 // over the copy being pointed to.
@@ -35,6 +43,9 @@ new mapboxgl.Popup()
 .setHTML(description)
 .addTo(map);
 });
+
+
+
 
 // Change the cursor to a pointer when the mouse is over the projekt-piwny-1ixmu5 layer.
 map.on('mouseenter', 'projekt-piwny-1ixmu5', function () {

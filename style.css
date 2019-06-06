@@ -4,3 +4,7 @@ body { margin:0; padding:0; }
 /* A następnie ustawiamy właściwości 'map'. Hasztag oznacza, że odwołujemy się do 
     obiektu o takim ID (u nas jest to ten jedyny <div> */
 #map { position:absolute; top:0; bottom:0; width:100%; }
+
+.mapboxgl-popup-content {
+    background: #91c949;
+}
