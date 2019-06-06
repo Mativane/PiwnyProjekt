@@ -20,7 +20,8 @@ const map = new mapboxgl.Map({
 // location of the feature, with description HTML from its properties.
 map.on('click', 'projekt-piwny-1ixmu5', function (e) {
 var coordinates = e.features[0].geometry.coordinates.slice();
-var description = "text";
+var description = 'Piwo od: ' +  e.features[0].properties.Cena + "<br> Nazwa:" + e.features[0].properties.Nazwa +
+  "<br> Adres:" + e.features[0].properties.Adres
   
 // Ensure that if the map is zoomed out such that multiple
 // copies of the feature are visible, the popup appears
