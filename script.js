@@ -16,7 +16,7 @@ const map = new mapboxgl.Map({
   container: 'map',
     // Style odpowiada za połączenie się do "dobrej" mapy z mapbox studio
     // W naszym przypadku - tej stworzonej przez Karola z zamieszczonymi punktami pubów
-  style: 'mapbox://styles/nataliachojnacka/cjwkh0q0368mg1cmdjbou5m1j',
+  style: 'mapbox://styles/nataliachojnacka/cjwkh0q0368mg1cmdjbou5m1j/draft',
     // Centrowanie i zoom odpowiada za ustawienie perseptywy w której wczytuje się mapa
   center: [16.939,52.408],
   zoom: 15.50
@@ -59,3 +59,12 @@ map.getCanvas().style.cursor = '';
 
 // Add zoom and rotation controls to the map.
 map.addControl(new mapboxgl.NavigationControl());
+
+function przelacz(layer) { 
+    //To nie działa oczywiście:
+    map.setLayoutProperty('NAZWA1', 'visibility', 'none')
+    map.setLayoutProperty('NAZWA2', 'visibility', 'none')
+    map.setLayoutProperty('NAZWA3', 'visibility', 'none')
+
+    map.setLayoutProperty(layer, 'visibility', 'visible')
+}
