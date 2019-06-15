@@ -62,9 +62,9 @@ map.addControl(new mapboxgl.NavigationControl());
 
 function przelacz(layer) { 
     //To nie działa oczywiście:
-    map.setLayoutProperty('NAZWA1', 'visibility', 'none')
-    map.setLayoutProperty('NAZWA2', 'visibility', 'none')
-    map.setLayoutProperty('NAZWA3', 'visibility', 'none')
+    map.setLayoutProperty('projekt-piwny-1ixmu5', 'visibility', 'none')
+    map.setLayoutProperty('tanie-srednie-c0fh5i', 'visibility', 'none')
+    map.setLayoutProperty('tanie-5f5gcv', 'visibility', 'none')
 
     map.setLayoutProperty(layer, 'visibility', 'visible')
 }
