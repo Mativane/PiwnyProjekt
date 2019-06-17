@@ -69,3 +69,26 @@ body { margin:0; padding:0; }
     background: rgba(219, 219, 219, 0.8);
 
 }
+
+.dropright{
+    height: 200px;
+    bottom: -200px;
+    left: -82px;
+}
+
+
+.dropdown-menu.show {
+    background: rgba(255, 255, 255, 0);
+}
+
+.navbar-brand{
+    color: rgb(255, 255, 255)
+}
+
+.list-group-item{
+    position: absolute;
+    height: 70px;
+    width: 190px;
+    bottom: 15px;
+
+}
