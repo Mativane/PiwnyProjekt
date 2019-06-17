@@ -65,14 +65,13 @@ body { margin:0; padding:0; }
     right: 0;
     top: 0;
     cursor: pointer;
-    background-color: transparent;
-    padding-right: 20px;
-    padding-top: 0;
+    background-color: #d3cc96ff50;
+    margin-right: -4px;
+    margin-top: -18px;
 }
-});
 
 .navbar{
-    background: rgba(219, 219, 219, 0.8);
+    background: #0d0e17e3;
 
 }
 
