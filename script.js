@@ -9,6 +9,48 @@ function flyToStore(currentFeature) {
   });
 }
 
+var aktywna_warstwa = 'projekt-piwny-1ixmu5'
+function przelacz(layer) { 
+  map.setLayoutProperty('projekt-piwny-1ixmu5', 'visibility', 'none')
+  map.setLayoutProperty('tanie-srednie-c0fh5i', 'visibility', 'none')
+  map.setLayoutProperty('tanie-5f5gcv', 'visibility', 'none')
+
+  map.setLayoutProperty(layer, 'visibility', 'visible')
+
+  aktywna_warstwa = layer
+
+  // When a click event occurs on a feature in the projekt-piwny-1ixmu5 layer, open a popup at the
+  // location of the feature, with description HTML from its properties.
+  map.on('click', aktywna_warstwa, function (e) {
+    var coordinates = e.features[0].geometry.coordinates.slice();
+    var description = 'Piwo od: ' +  e.features[0].properties.Cena + "<br> Nazwa:" + e.features[0].properties.Nazwa +
+      "<br> Adres:" + e.features[0].properties.Adres
+    flyToStore(e.features[0])
+    
+    // Ensure that if the map is zoomed out such that multiple
+    // copies of the feature are visible, the popup appears
+    // over the copy being pointed to.
+    while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+    coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+    }
+      
+    new mapboxgl.Popup()
+    .setLngLat(coordinates)
+    .setHTML(description)
+    .addTo(map);
+    });
+    
+    // Change the cursor to a pointer when the mouse is over the active layer.
+    map.on('mouseenter', aktywna_warstwa, function () {
+    map.getCanvas().style.cursor = 'pointer';
+    });
+      
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', aktywna_warstwa, function () {
+    map.getCanvas().style.cursor = '';
+    });
+}
+
 //Tworzymy nowy obiekt o nazwie map, za pomocą funkcji pobranej z mapboxa
 const map = new mapboxgl.Map({
     // Nadajemy mu kontener, czyli to gdzie ma się pojawiać. 
@@ -23,52 +65,6 @@ const map = new mapboxgl.Map({
 
 });
 
-var aktywna_warstwa = 'projekt-piwny-1ixmu5'
-
-// When a click event occurs on a feature in the projekt-piwny-1ixmu5 layer, open a popup at the
-// location of the feature, with description HTML from its properties.
-map.on('click', aktywna_warstwa, function (e) {
-var coordinates = e.features[0].geometry.coordinates.slice();
-var description = 'Piwo od: ' +  e.features[0].properties.Cena + "<br> Nazwa:" + e.features[0].properties.Nazwa +
-  "<br> Adres:" + e.features[0].properties.Adres
-flyToStore(e.features[0])
-
-// Ensure that if the map is zoomed out such that multiple
-// copies of the feature are visible, the popup appears
-// over the copy being pointed to.
-while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-}
-  
-new mapboxgl.Popup()
-.setLngLat(coordinates)
-.setHTML(description)
-.addTo(map);
-});
-
-
-
-
-// Change the cursor to a pointer when the mouse is over the active layer.
-map.on('mouseenter', aktywna_warstwa, function () {
-map.getCanvas().style.cursor = 'pointer';
-});
-  
-// Change it back to a pointer when it leaves.
-map.on('mouseleave', aktywna_warstwa, function () {
-map.getCanvas().style.cursor = '';
-});
-
 // Add zoom and rotation controls to the map.
 map.addControl(new mapboxgl.NavigationControl());
 
-function przelacz(layer) { 
-    //To nie działa oczywiście:
-    map.setLayoutProperty('projekt-piwny-1ixmu5', 'visibility', 'none')
-    map.setLayoutProperty('tanie-srednie-c0fh5i', 'visibility', 'none')
-    map.setLayoutProperty('tanie-5f5gcv', 'visibility', 'none')
-
-    map.setLayoutProperty(layer, 'visibility', 'visible')
-
-    aktywna_warstwa = layer
-}
