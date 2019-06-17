@@ -18,3 +18,8 @@ body { margin:0; padding:0; }
     overflow: auto;
     border-radius: 3px;
 }
+
+.navbar{
+    background: rgba(219, 219, 219, 0.8);
+
+}
