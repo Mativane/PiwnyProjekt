@@ -23,9 +23,11 @@ const map = new mapboxgl.Map({
 
 });
 
+var aktywna_warstwa = 'projekt-piwny-1ixmu5'
+
 // When a click event occurs on a feature in the projekt-piwny-1ixmu5 layer, open a popup at the
 // location of the feature, with description HTML from its properties.
-map.on('click', 'projekt-piwny-1ixmu5', function (e) {
+map.on('click', aktywna_warstwa, function (e) {
 var coordinates = e.features[0].geometry.coordinates.slice();
 var description = 'Piwo od: ' +  e.features[0].properties.Cena + "<br> Nazwa:" + e.features[0].properties.Nazwa +
   "<br> Adres:" + e.features[0].properties.Adres
@@ -47,13 +49,13 @@ new mapboxgl.Popup()
 
 
 
-// Change the cursor to a pointer when the mouse is over the projekt-piwny-1ixmu5 layer.
-map.on('mouseenter', 'projekt-piwny-1ixmu5', function () {
+// Change the cursor to a pointer when the mouse is over the active layer.
+map.on('mouseenter', aktywna_warstwa, function () {
 map.getCanvas().style.cursor = 'pointer';
 });
   
 // Change it back to a pointer when it leaves.
-map.on('mouseleave', 'projekt-piwny-1ixmu5', function () {
+map.on('mouseleave', aktywna_warstwa, function () {
 map.getCanvas().style.cursor = '';
 });
 
@@ -67,4 +69,6 @@ function przelacz(layer) {
     map.setLayoutProperty('tanie-5f5gcv', 'visibility', 'none')
 
     map.setLayoutProperty(layer, 'visibility', 'visible')
+
+    aktywna_warstwa = layer
 }
