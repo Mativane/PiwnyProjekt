@@ -82,5 +82,13 @@ body { margin:0; padding:0; }
     height: 70px;
     width: 190px;
     bottom: 15px;
+}
 
+.plus18{
+  position: relative;
+  background: rgb(255, 255, 255);
+  height: 70px;
+  width: 170px;
+  left: 600px;
+  top: 225px;
 }
