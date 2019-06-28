@@ -76,4 +76,4 @@ const map = new mapboxgl.Map({
 });
 
 // Add zoom and rotation controls to the map.
-map.addControl(new mapboxgl.NavigationControl(position: absolut));
+map.addControl(new mapboxgl.NavigationControl)
