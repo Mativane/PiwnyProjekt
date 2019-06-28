@@ -39,7 +39,7 @@ body { margin:0; padding:0; }
     margin: 0;
     display: block;
     padding: 10px;
-    font-weight: 400;
+    font-weight: 600;
   }
 
 
@@ -74,15 +74,22 @@ body { margin:0; padding:0; }
 }
 
 .navbar-brand{
-    color: rgb(255, 255, 255)
+    color: rgb(255, 255, 255);
+    font-family: "Impact", fantasy;
+    text-align: center;
 }
+
 
 .list-group-item{
     position: absolute;
     height: 70px;
     width: 190px;
     bottom: 15px;
+    font size: 20px;
+    font-family: 'Century Gothic';
+    font-weight: bold;
 }
+
 #plus18{
   position: absolute;
   background: rgb(255, 255, 255);
@@ -95,10 +102,18 @@ body { margin:0; padding:0; }
 .btn-primary{
   width: 45%;
   height: 120px;
+  background: #97a69daa;
 }
 
 
-.images{
-  margin-left: 40px;
+#image1{
+  margin-left: 44px;
 }
 
+#image2{
+  margin-left: 25px;
+}
+
+#image3{
+  margin-left: 30px;
+}
