@@ -64,10 +64,9 @@ body { margin:0; padding:0; }
 
 .dropright{
     height: 200px;
-    bottom: -200px;
+    bottom: -100px;
     left: -82px;
 }
-
 
 .dropdown-menu.show {
     background: rgba(255, 255, 255, 0);
@@ -83,7 +82,6 @@ body { margin:0; padding:0; }
     width: 190px;
     bottom: 15px;
 }
-
 .plus18{
   position: relative;
   background: rgb(255, 255, 255);
