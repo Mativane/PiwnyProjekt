@@ -86,8 +86,13 @@ body { margin:0; padding:0; }
 #plus18{
   position: absolute;
   background: rgb(255, 255, 255);
-  height: 100px;
-  width: 170px;
-  left: 600px;
-  top: 225px;
+  height: 80%;
+  width: 80%;
+  left: 10%;
+  top: 10%;
+}
+
+.btn-primary{
+  width: 45%;
+  height: 120px;
 }
