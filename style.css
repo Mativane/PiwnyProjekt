@@ -63,8 +63,9 @@ body { margin:0; padding:0; }
 }
 
 .dropright{
+    position: absolute;
     height: 200px;
-    bottom: -100px;
+    bottom: -200px;
     left: -82px;
 }
 
@@ -83,7 +84,7 @@ body { margin:0; padding:0; }
     bottom: 15px;
 }
 #plus18{
-  position: relative;
+  position: absolute;
   background: rgb(255, 255, 255);
   height: 100px;
   width: 170px;
