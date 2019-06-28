@@ -70,7 +70,7 @@ const map = new mapboxgl.Map({
     // W naszym przypadku - tej stworzonej przez Karola z zamieszczonymi punktami pubów
   style: 'mapbox://styles/nataliachojnacka/cjwkh0q0368mg1cmdjbou5m1j/draft',
     // Centrowanie i zoom odpowiada za ustawienie perseptywy w której wczytuje się mapa
-  center: [16.939,52.408],
+  center: [16.9355, 52.4085],
   zoom: 15.50
 
 });
