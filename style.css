@@ -82,7 +82,7 @@ body { margin:0; padding:0; }
     width: 190px;
     bottom: 15px;
 }
-.plus18{
+#plus18{
   position: relative;
   background: rgb(255, 255, 255);
   height: 70px;

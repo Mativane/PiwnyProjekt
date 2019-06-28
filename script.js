@@ -61,6 +61,12 @@ popup = new mapboxgl.Popup()
     });
 }
 
+function hide() {
+  var x = document.getElementById('plus18');
+  x.style.display = 'none';
+  przelacz(layer='projekt-piwny-1ixmu5')
+}
+
 //Tworzymy nowy obiekt o nazwie map, za pomocą funkcji pobranej z mapboxa
 const map = new mapboxgl.Map({
     // Nadajemy mu kontener, czyli to gdzie ma się pojawiać. 
@@ -70,7 +76,7 @@ const map = new mapboxgl.Map({
     // W naszym przypadku - tej stworzonej przez Karola z zamieszczonymi punktami pubów
   style: 'mapbox://styles/nataliachojnacka/cjwkh0q0368mg1cmdjbou5m1j/draft',
     // Centrowanie i zoom odpowiada za ustawienie perseptywy w której wczytuje się mapa
-  center: [16.939,52.408],
+  center: [16.935,52.4083],
   zoom: 15.50
 
 });
