@@ -12,7 +12,7 @@ body { margin:0; padding:0; }
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
   }
 
-.mapboxgl-popup-content-wrapper {
+  .mapboxgl-popup-content-wrapper {
     padding: 1%;
   }
 
@@ -31,7 +31,7 @@ body { margin:0; padding:0; }
     margin-top: -15px;
   }
 
-.mapboxgl-popup-content h4 {
+  .mapboxgl-popup-content h4 {
     background: #ffffffff;
     text-align: center;
     font-size: 16px;
@@ -43,7 +43,7 @@ body { margin:0; padding:0; }
   }
 
 
-.mapboxgl-popup-content div {
+  .mapboxgl-popup-content div {
     padding: 10px;
   }
 
@@ -58,7 +58,7 @@ body { margin:0; padding:0; }
 }
 
 .navbar{
-    background: #000000aa;
+    background: #0d0e17e3;
 
 }
 
