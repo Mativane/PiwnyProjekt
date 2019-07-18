@@ -52,9 +52,9 @@ body { margin:0; padding:0; }
     right: 0;
     top: 0;
     cursor: pointer;
-    background-color: #d3cc96ff50;
+    background-color: #d3cc9600;
     margin-right: -4px;
-    margin-top: -18px;
+    margin-top: -18px; 
 }
 
 .navbar{
@@ -76,7 +76,6 @@ body { margin:0; padding:0; }
 .navbar-brand{
     color: rgb(255, 255, 255);
     font-family: "Impact", fantasy;
-    text-align: center;
 }
 
 
@@ -85,7 +84,7 @@ body { margin:0; padding:0; }
     height: 70px;
     width: 190px;
     bottom: 15px;
-    font size: 20px;
+    font-size: 20px;
     font-family: 'Century Gothic';
     font-weight: bold;
 }
