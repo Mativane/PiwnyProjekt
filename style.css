@@ -64,14 +64,19 @@ body { margin:0; padding:0; }
 
 .dropright{
     position: absolute;
-    height: 200px;
+    height: 300px;
     bottom: -200px;
-    left: -82px;
+    left: 0px;
+    width: 50px;
+
 }
 
+
 .dropdown-menu.show {
-    background: rgba(255, 255, 255, 0);
+  background: rgba(255, 255, 255, 0);
+border: none;
 }
+
 
 .navbar-brand{
     color: rgb(255, 255, 255);
@@ -81,7 +86,7 @@ body { margin:0; padding:0; }
 
 .list-group-item{
     position: absolute;
-    height: 70px;
+    height: 104px;
     width: 190px;
     bottom: 15px;
     font-size: 20px;
@@ -91,17 +96,17 @@ body { margin:0; padding:0; }
 
 #plus18{
   position: absolute;
-  background: rgb(255, 255, 255);
-  height: 80%;
-  width: 80%;
-  left: 10%;
-  top: 10%;
+  background: rgb(110, 255, 74);
+  height: 100%;
+  width: 100%;
+  left: 0%;
+  top: 0%;
 }
 
 .btn-primary{
   width: 45%;
   height: 120px;
-  background: #97a69daa;
+  background:rgb(74, 228, 255) !important;
 }
 
 
