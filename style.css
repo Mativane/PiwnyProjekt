@@ -57,6 +57,45 @@ body { margin:0; padding:0; }
     margin-top: -18px; 
 }
 
+
+@font-face {
+  font-family: "headlinerno.45";
+  src: url(fonts/headlinerno.45_demo-webfont.woff), url(fonts/headlinerno.45_demo-webfont.woff2);
+}
+
+@font-face {
+  font-family: "jersey_m54";
+  src: url(fonts/jersey_m54/Jersey\ M54.rtf), url(fonts/jersey_m54/Jersey\ M54.ttf);
+}
+
+@font-face {
+  font-family: "gunplay rg";
+  src: url(fonts/gunplay/gunplay\ rg.ttf);
+}
+
+@font-face {
+  font-family: "powerpuff_girls";
+  src: url(fonts/powerpuff_girls/powerpuff\ girls\ font.ttf);
+}
+
+@font-face {
+  font-family: "vintage_college_dept_worn";
+  src: url(fonts/vintage_college_dept_worn/VINTAGE\ COLLEGE\ DEPT_worn.otf);
+}
+
+@font-face {
+  font-family: "highvoltage_rough";
+  src: url(fonts/highvoltage_rough/HighVoltage\ Rough.ttf);
+}
+
+@font-face {
+  font-family: "loud_and_clear_2";
+  src: url(fonts/loud_and_clear_2/LOUD\ AND\ CLEAR\ PERSONAL\ USE.ttf);
+}
+
+
+
+
 .navbar{
     background: #0d0e17e3;
 
@@ -78,11 +117,12 @@ border: none;
 }
 
 
-.navbar-brand{
-    color: rgb(255, 255, 255);
-    font-family: "Impact", fantasy;
+.navbar-brand {
+  color: rgb(255, 255, 255);
+  font-family: "jersey_m54";
+  font-size: 300% !important; 
+  font-weight: 500;
 }
-
 
 .list-group-item{
     position: absolute;
