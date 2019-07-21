@@ -102,17 +102,24 @@ border: none;
 
 #plus18{
   position: absolute;
-  background: rgb(110, 255, 74);
+  background-image: url("piana.jpg");
+  background-size: cover;
   height: 100%;
   width: 100%;
   left: 0%;
   top: 0%;
+  font-size: 300%;
+  font-family: "Luminary", fantasy;
 }
 
 .btn-primary{
-  width: 45%;
-  height: 120px;
-  background:rgb(74, 228, 255) !important;
+  width: 20%;
+  height: 70%;
+  background: #2a241cff !important; 
+  font-family: 'Century Gothic';
+  font-size: 50% !important;
+  border-color: #2a241cff !important;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 
