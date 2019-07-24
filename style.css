@@ -57,6 +57,11 @@ body { margin:0; padding:0; }
   src: url(fonts/jersey_m54/Jersey\ M54.rtf), url(fonts/jersey_m54/Jersey\ M54.ttf);
 }
 
+@font-face {
+  font-family: "american_captain";
+  src: url(fonts/american_captain/American\ Captain.otf), url(fonts/american_captain/American\ Captain.ttf);
+}
+
 .navbar{
   background: #0d0e17e3;
 
@@ -101,10 +106,14 @@ border: none;
   width: 100%;
   left: 0%;
   top: 0%;
-  font-size: 300%;
-  font-family: "Luminary", fantasy;
   z-index: 3;
 }
+
+#plus18{
+  font-size: 300%;
+  font-family: "american_captain", fantasy;
+}
+
 
 .btn-primary{
   width: 20%;
