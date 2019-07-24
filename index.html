@@ -12,10 +12,9 @@
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
     <link rel='stylesheet' type='text/css' href='style.css'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </head>
 
   <body>
@@ -24,43 +23,32 @@
     <div id='map'></div>
 
     <nav class="navbar">
-        <a class="navbar-brand" href="#">Projekt Piwo</a>
-        <div class="btn-group" role="group" aria-label="Basic example">
-          <button type="button" class="btn btn-secondary">Polski</button>
-          <button type="button" class="btn btn-secondary">English</button>
+      <a class="navbar-brand" href="#">Projekt Piwo</a>
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-secondary">Polski</button>
+        <button type="button" class="btn btn-secondary">English</button>
+      </div>
+    </nav>
         
-        </div>
-        </nav>
-        
-        <div id="plus18"> 
-         <center> 
-          Czy jesteś pełnoletni?
-          <br><br>
-          <button type="button" class="btn btn-primary btn-sm" onclick="hide()">TAK</button>
-          <button type="button" class="btn btn-primary btn-sm" onclick="location.href='http://www.google.com'" >NIE</button>
-         </center>
-        </div> 
+    <div id="plus18"> 
+      <center> 
+      Czy jesteś pełnoletni?
+      <br><br>
+      <button type="button" class="btn btn-primary btn-sm" onclick="hide()">TAK</button>
+      <button type="button" class="btn btn-primary btn-sm" onclick="location.href='http://www.google.com'" >NIE</button>
+      </center>
+    </div> 
 
-        <div class="btn-group dropright">
-          <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            
-          </button>
-          <div class="dropdown-menu">
-           <ul class="list-group">
-             <li class="list-group-item list-group-item-action" onclick="przelacz(layer='tanie-5f5gcv')">Tanie<span><img src="https://i.imgur.com/txXMRl4.png" id="image1" width="22" height="45"></span></li>
-             <li class="list-group-item list-group-item-action" onclick="przelacz(layer='tanie-srednie-c0fh5i')">Średnie<span><img src="https://i.imgur.com/cL3LVzV.png" id="image2" width="25" height="38"></span></li>
-             <li class="list-group-item list-group-item-action" onclick="przelacz(layer='projekt-piwny-1ixmu5')">Drogie<span><img src="https://i.imgur.com/MuSeBlK.png" id="image3" width="32" height="39"></span></li>
-                      
-              </ul>
-                    
-                </div>
-          </div>
-        
-
-        </div>
-
-
-
+    <div class="btn-group dropright">
+      <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+      <div class="dropdown-menu">
+        <ul class="list-group">
+          <li class="list-group-item list-group-item-action" onclick="przelacz(layer='tanie-5f5gcv')">Tanie<span><img src="https://i.imgur.com/txXMRl4.png" id="image1" width="22" height="45"></span></li>
+          <li class="list-group-item list-group-item-action" onclick="przelacz(layer='tanie-srednie-c0fh5i')">Średnie<span><img src="https://i.imgur.com/cL3LVzV.png" id="image2" width="25" height="38"></span></li>
+          <li class="list-group-item list-group-item-action" onclick="przelacz(layer='projekt-piwny-1ixmu5')">Drogie<span><img src="https://i.imgur.com/MuSeBlK.png" id="image3" width="32" height="39"></span></li>     
+        </ul>
+      </div>
+    </div>
   </body>
 
   <!-- Importy JSów. Dlaczego na końcu? Bo mogą oddziaływać na elementy html które 

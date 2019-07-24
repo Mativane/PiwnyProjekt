@@ -1,60 +1,55 @@
-/* Najpierw ustawiamy "body", czyli naszą wyświetlaną stroną jako całość */
 body { margin:0; padding:0; }
 
-/* A następnie ustawiamy właściwości 'map'. Hasztag oznacza, że odwołujemy się do 
-    obiektu o takim ID (u nas jest to ten jedyny <div> */
 #map { position:absolute; top:0; bottom:0; width:100%; }
 
 .mapboxgl-popup-content {
-    font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
-    padding: 0;
-    width: 180px;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-  }
+  font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+  padding: 0;
+  width: 180px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
 
-  .mapboxgl-popup-content-wrapper {
-    padding: 1%;
-  }
-
+.mapboxgl-popup-content-wrapper {
+  padding: 1%;
+}
 
 .mapboxgl-popup-content h3 {
-    background: #d3cc96ff;
-    color: #3b2727ff;
-    text-align: center;
-    font-size: 20px;
-    font-family: "Luminary", fantasy;
-    margin: 0;
-    display: block;
-    padding: 10px;
-    border-radius: 3px 3px 0 0;
-    font-weight: 700;
-    margin-top: -15px;
+  background: #d3cc96ff;
+  color: #3b2727ff;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Luminary", fantasy;
+  margin: 0;
+  display: block;
+  padding: 10px;
+  border-radius: 3px 3px 0 0;
+  font-weight: 700;
+  margin-top: -15px;
   }
 
   .mapboxgl-popup-content h4 {
-    background: #ffffffff;
-    text-align: center;
-    font-size: 16px;
-    font-family: 'Century Gothic';
-    margin: 0;
-    display: block;
-    padding: 10px;
-    font-weight: 600;
+  background: #ffffffff;
+  text-align: center;
+  font-size: 16px;
+  font-family: 'Century Gothic';
+  margin: 0;
+  display: block;
+  padding: 10px;
+  font-weight: 600;
   }
-
 
   .mapboxgl-popup-content div {
     padding: 10px;
   }
 
 .mapboxgl-popup-close-button {
-    position: absolute;
-    right: 0;
-    top: 0;
-    cursor: pointer;
-    background-color: #d3cc9600;
-    margin-right: -4px;
-    margin-top: -18px; 
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  background-color: #d3cc9600;
+  margin-right: -4px;
+  margin-top: -18px; 
 }
 
 @font-face {
@@ -63,25 +58,23 @@ body { margin:0; padding:0; }
 }
 
 .navbar{
-    background: #0d0e17e3;
+  background: #0d0e17e3;
 
 }
 
 .dropright{
-    position: absolute;
-    height: 300px;
-    bottom: -200px;
-    left: 0px;
-    width: 50px;
+  position: absolute;
+  height: 300px;
+  bottom: -200px;
+  left: 0px;
+  width: 50px;
 
 }
-
 
 .dropdown-menu.show {
   background: rgba(255, 255, 255, 0);
 border: none;
 }
-
 
 .navbar-brand {
   color: rgb(255, 255, 255);
@@ -91,13 +84,13 @@ border: none;
 }
 
 .list-group-item{
-    position: absolute;
-    height: 100px;
-    width: 170px;
-    bottom: 15px;
-    font-size: 20px;
-    font-family: 'Century Gothic';
-    font-weight: bold;
+  position: absolute;
+  height: 100px;
+  width: 170px;
+  bottom: 15px;
+  font-size: 20px;
+  font-family: 'Century Gothic';
+  font-weight: bold;
 }
 
 #plus18{
@@ -123,7 +116,6 @@ border: none;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
-
 #image1{
   margin-left: 44px;
 }
@@ -142,7 +134,3 @@ border: none;
   content: "\f078";
   vertical-align: 0;
 }
-
-
-
-
