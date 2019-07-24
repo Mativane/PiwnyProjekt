@@ -136,4 +136,13 @@ border: none;
   margin-left: 30px;
 }
 
+.dropdown-toggle::after {
+  border: none;
+  font: normal normal normal 40px/1 'Font Awesome 5 Free';
+  content: "\f078";
+  vertical-align: 0;
+}
+
+
+
 
