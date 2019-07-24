@@ -62,6 +62,11 @@ body { margin:0; padding:0; }
   src: url(fonts/american_captain/American\ Captain.otf), url(fonts/american_captain/American\ Captain.ttf);
 }
 
+@font-face {
+  font-family: "bebas";
+  src: url(fonts/bebas/Bebas-Regular.ttf);
+}
+
 .navbar{
   background: #0d0e17e3;
 
@@ -109,9 +114,11 @@ border: none;
   z-index: 3;
 }
 
-#plus18{
-  font-size: 300%;
-  font-family: "american_captain", fantasy;
+#plus18-text{
+  font-size: 450%;
+  font-family: "bebas";
+  font-weight: 600;
+  margin-top: 10%;
 }
 
 
@@ -120,7 +127,7 @@ border: none;
   height: 70%;
   background: #2a241cff !important; 
   font-family: 'Century Gothic';
-  font-size: 50% !important;
+  font-size: 150% !important;
   border-color: #2a241cff !important;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
