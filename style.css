@@ -110,6 +110,7 @@ border: none;
   top: 0%;
   font-size: 300%;
   font-family: "Luminary", fantasy;
+  z-index: 3;
 }
 
 .btn-primary{
